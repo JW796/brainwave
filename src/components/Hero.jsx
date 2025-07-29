@@ -1,11 +1,11 @@
 import { curve, heroBackground, robot } from "../assets";
-import Button from "./Button"
-import Section from "./Section"
+import Button from "./Button";
+import Section from "./Section";
 
 const Hero = () => {
   return (
     <Section
-      className="pt-[12rem] -mt-[5.25]"
+      className="pt-[12rem] -mt-[5.25rem]"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
@@ -16,7 +16,7 @@ const Hero = () => {
           <h1 className="h1 mb-6">
             Explore the Possibilites of AI Chatting with <span></span>
             <span className="inline-block relative">
-            Brainwave{" "}
+              Brainwave{" "}
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -40,7 +40,13 @@ const Hero = () => {
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
 
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
-                <img src={robot} className="w-full" width={1024} height={490} alt="AI" />
+                <img
+                  src={robot}
+                  className="w-full scale-[1.7] translate-y-[8%] mg:scale-[1] md:translate-y-[10%] lg:-translate-y-[3%]"
+                  width={1024}
+                  height={490}
+                  alt="AI"
+                />
               </div>
             </div>
           </div>
@@ -57,6 +63,6 @@ const Hero = () => {
       </div>
     </Section>
   );
-}
+};
 
-export default Hero
+export default Hero;
