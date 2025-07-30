@@ -1,8 +1,14 @@
 import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { heroIcons } from "../constants";
+import { ScrollParallax } from "react-just-parallax";
+import { useRef } from "react";
 
 const Hero = () => {
+    const parallaxRef = useRef(null);
+
   return (
     <Section
       className="pt-[12rem] -mt-[5.25rem]"
@@ -11,9 +17,9 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      <div className="Container relative">
+      <div className="Container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb:[6rem]">
-          <h1 className="h1 mb-6 md:mt-20 sm:mt-30 xs:mt-30 xxs-mt:60">
+          <h1 className="h1 mb-6 md:mt-30 sm:mt-30 xs:mt-30 xxs-mt:60">
             Explore the Possibilites of AI Chatting with <span></span>
             <span className="inline-block relative">
               Brainwave{" "}
@@ -47,8 +53,20 @@ const Hero = () => {
                   height={490}
                   alt="AI"
                 />
+
+                <ScrollParallax isAbsolutelyPositioned>
+                    <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blue border border-n-1/10 rounded-2xl xl:flex">
+                    {heroIcons.map((icon, index) => (
+                        <li className="p-5" key={index}>
+                            <img src={icon} width={24} height={25} alt={icon} />
+                        </li>
+                    ))}
+                    </ul>
+                </ScrollParallax>
               </div>
             </div>
+
+            <Gradient />
           </div>
           <div className="absolue -translate-x-1/7 -translate-y-3/5 md:-top-[46%] md:w-[138%] lg-top-[104%]">
             <img
@@ -59,6 +77,8 @@ const Hero = () => {
               alt="hero"
             />
           </div>
+
+          <BackgroundCircles />
         </div>
       </div>
     </Section>
