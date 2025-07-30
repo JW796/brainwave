@@ -13,7 +13,7 @@ const Hero = () => {
     >
       <div className="Container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb:[6rem]">
-          <h1 className="h1 mb-6">
+          <h1 className="h1 mb-6 md:mt-20 sm:mt-30 xs:mt-30 xxs-mt:60">
             Explore the Possibilites of AI Chatting with <span></span>
             <span className="inline-block relative">
               Brainwave{" "}
@@ -50,7 +50,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="absolue -top-[54%] left-1/2 w-[234%] -translate-1/2 md:-top-[46%] md:w-[138%] lg-top-[104%]">
+          <div className="absolue -translate-x-1/7 -translate-y-3/5 md:-top-[46%] md:w-[138%] lg-top-[104%]">
             <img
               src={heroBackground}
               className="w-full"

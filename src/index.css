@@ -86,6 +86,10 @@
 }
 
 @theme {
+  --breakpoint-xs: 350px;
+}
+
+@theme {
   /* Colors */
   --color-color-1: #AC6AFF;
   --color-color-2: #FFC876;
