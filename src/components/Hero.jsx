@@ -6,6 +6,7 @@ import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import Generating from "./Generating";
 import Notification from "./Notification";
+import CompanyLogos from "./CompanyLogos";
 import { useRef } from "react";
 
 const Hero = () => {
@@ -34,7 +35,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb--6 text-h-2 lg:mb-8">
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-h-2 lg:mb-8">
             Unleash the power of AI within Brainwaive. Upgrade your productivity
             with Brainwave, the open AI chat app.
           </p>
@@ -42,7 +43,7 @@ const Hero = () => {
             Get Started
           </Button>
         </div>
-        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
@@ -65,29 +66,31 @@ const Hero = () => {
                     ))}
                   </ul>
                 </ScrollParallax>
-                
+
                 <ScrollParallax isAbsolutelyPositioned>
-                    <Notification className="hidden absolute -right-[3.5rem] bottom-[11rem] w-[18rem] xl:flex"
+                  <Notification
+                    className="hidden absolute -right-[3.5rem] bottom-[11rem] w-[18rem] xl:flex"
                     title="code generation"
-                    />
+                  />
                 </ScrollParallax>
               </div>
             </div>
 
             <Gradient />
           </div>
-          <div className="absolue -translate-x-1/7 -translate-y-3/5 md:-top-[46%] md:w-[138%] lg-top-[104%]">
+          <div className="absolue -translate-x-1/7 -translate-y-3/5 md:-top-[46%] md:w-[138%] lg-top-[0%] xs:hidden">
             <img
               src={heroBackground}
               className="w-full"
-              width={1440}
-              height={1800}
+              width={1240}
+              height={1600}
               alt="hero"
             />
           </div>
 
           <BackgroundCircles />
         </div>
+        <CompanyLogos className="hidden relative z-100 lg:block" />
       </div>
       <BottomLine />
     </Section>
