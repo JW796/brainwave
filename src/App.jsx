@@ -1,16 +1,14 @@
-import ButtonGradient from './assets/svg/ButtonGradient'
-import Benefits from './components/Benefits';
-import Collaboration from './components/Collaboration';
-import Header from './components/Header';
-import Hero from './components/Hero'
-import Services from './components/Services';
+import ButtonGradient from "./assets/svg/ButtonGradient";
+import Benefits from "./components/Benefits";
+import Collaboration from "./components/Collaboration";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
 
 const App = () => {
-
   return (
     <>
-
-      <div className='pt-[4.75] lg:pt-[5.25rem] overflow-hidden'>
+      <div className="pt-[4.75] lg:pt-[5.25rem] overflow-hidden">
         <Header />
         <Hero />
         <Benefits />
@@ -21,6 +19,6 @@ const App = () => {
       <ButtonGradient />
     </>
   );
-}
+};
 
-export default App
+export default App;
