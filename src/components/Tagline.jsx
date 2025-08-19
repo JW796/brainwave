@@ -1,5 +1,5 @@
 
-const Tagline = () => {
+const Tagline = ({ className, children }) => {
   return (
     <div>Tagline</div>
   )
