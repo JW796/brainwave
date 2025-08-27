@@ -1,4 +1,6 @@
 import { pricing } from "../constants";
+import Button from "./Button";
+import { check } from "../assets";
 
 const PricingList = () => {
   return (
@@ -20,6 +22,25 @@ const PricingList = () => {
               </>
             )}
           </div>
+          <Button
+            className="w-full mb-6"
+            href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
+            white={!!item.price}
+          >
+            {item.price ? "Get started" : "Contact us"}
+          </Button>
+
+          <ul>
+            {item.features.map((feature, index) => (
+              <li
+                key={index}
+                className="flex items-start py-5 border-t border-n-6"
+              >
+                <img src={check} width={24} height={24} alt="Check" />
+                <p className="body-2 ml-4">{feature}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>
